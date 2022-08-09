@@ -13,21 +13,22 @@ const menuOptions: MenuOption[] = [
     icon: () => h(NIcon, null, { default: () => h(Classification) }),
   },
   {
-      label: "评分管理",
+      label: "渲染模板",
+      key: "scoreView",
+      router: "scoreView",
+      icon: () => h(NIcon, null, { default: () => h(BarChartOutline) }),
+  },
+  {
+      label: "样式规范",
       key: "score",
       router: "score",
       icon: () => h(NIcon, null, { default: () => h(CreditScoreTwotone) }),
   },
   {
-      label: "数据分析",
+      label: "模块封装",
       key: "analysis",
       router: "analysis",
       icon: () => h(NIcon, null, { default: () => h(BarChartOutline) }),
-  },
-  {
-      label: "教师评分",
-      key: "scoreView",
-      router: "scoreView",
   },
 ];
 </script>
@@ -44,7 +45,7 @@ const menuOptions: MenuOption[] = [
         <img src="../assets/avatar.jpg" class="system-avatar" />
         <h3 class="system-title">Template</h3>
       </div>
-      <NMenu inverted class="system-menu" :options="menuOptions" />
+      <NMenu class="system-menu" :options="menuOptions" />
     </NLayoutSider>
     <NLayout :native-scrollbar="false" embedded style="height: 100%">
       内容区域
