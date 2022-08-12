@@ -8,7 +8,7 @@ const switchTheme = () => {
     theme.value = theme.value == "dark" ? "light" : "dark";
     emitter.emit("on-switch-theme", theme.value);
 };
-switchTheme()
+switchTheme();
 </script>
 
 <template>
@@ -36,9 +36,10 @@ switchTheme()
     overflow: hidden;
     user-select: none;
     text-align: center;
-    padding: 12px 30px;
+    padding: 10px 30px;
     margin: auto;
     border-radius: 5px;
+    box-shadow: 1px 1px 5px;
     span,
     .theme-icon {
         color: var(--theme-text-color);
@@ -65,17 +66,17 @@ switchTheme()
 }
 
 .theme-wrap::before {
-    background: var(--theme--before-bg-color);
+    background: var(--theme-before-bg-color);
     content: "";
     width: 120%;
     left: -10%;
     transform: skew(30deg);
-    transform: translate3d(-100%, 0, 0);
+    // transform: translate3d(-100%, 0, 0);
     transition: transform 0.2s cubic-bezier(0.3, 1, 0.8, 1);
 }
 
 .theme-wrap:hover::before {
-    transform: translate3d(0, 0, 0);
+    transform: translate3d(100%, 0, 0);
 }
 .theme-icon {
     vertical-align: sub;
