@@ -6,13 +6,17 @@ import {
     // create naive ui
     create,
     NMessageProvider,
-    NIcon
+    NIcon,
+    NConfigProvider,
+    NDialogProvider
 } from 'naive-ui'
 
 const naive = create({
     components: [
         NMessageProvider,
-        NIcon
+        NIcon,
+        NConfigProvider,
+        NDialogProvider
     ]
 })
 
